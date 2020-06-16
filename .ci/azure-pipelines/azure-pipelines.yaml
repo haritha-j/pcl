@@ -12,14 +12,8 @@ resources:
       image: pointcloudlibrary/doc
 
 stages:
-  - stage: formatting
-    displayName: Formatting
-    jobs:
-      - template: formatting.yaml
-
   - stage: build_gcc
     displayName: Build GCC
-    dependsOn: formatting
     jobs:
       - job: ubuntu
         displayName: Ubuntu
