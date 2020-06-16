@@ -43,7 +43,6 @@ stages:
 
   - stage: build_clang
     displayName: Build Clang
-    dependsOn: formatting
     jobs:
       - job: osx
         displayName: macOS
@@ -91,7 +90,6 @@ stages:
 
   - stage: build_msvc
     displayName: Build MSVC
-    dependsOn: formatting
     jobs:
       - job: vs2017
         displayName: Windows VS2017 Build
