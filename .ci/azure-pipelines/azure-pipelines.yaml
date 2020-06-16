@@ -113,12 +113,6 @@ stages:
         steps:
           - template: build/windows.yaml
 
-  - stage: documentation
-    displayName: Documentation
-    dependsOn: []
-    jobs:
-      - template: documentation.yaml
-
   - stage: tutorials
     displayName: Tutorials
     dependsOn: build_gcc
